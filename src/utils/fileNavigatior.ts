@@ -305,7 +305,7 @@ export async function displayFileLineSuggester(
 	const chooser =
 		getActiveViewType(plugin) === ViewType.none
 			? await createFileChooser(plugin)
-			: await createFileChooser(plugin, getActiveView(plugin).file.path);
+			: await createFileChooser(plugin);
 	await chooser.display(
 		async (
 			fileSelected: SuggesterItem,
